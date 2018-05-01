@@ -4,5 +4,6 @@ echo "This will EXCLUDE all files with a CSV file extension"
 set /p filePath="Please PASTE the path to the folder that you want using [shift] + [INS]:"
 pushd %filePath%
 for /r %%i in (*) do @echo %%~nxi >> filelist.csv
+popd
 echo Operation successful, located at:%filePath%filelist.csv
 pause
